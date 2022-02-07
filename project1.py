@@ -30,10 +30,7 @@ random coordinate points
 def main(): 
     #store in 36 variables the information of rgb values 
     p1 = RedGreenBlue(200, 123, 254) # example of an rgb value of 200,123,254
-
-    print(p1.blue)
-    print(p1.red)
-    print(p1.green)
+    p1.str()
 
 
 #class RedGreenBlue that takes in three parameters 
@@ -42,7 +39,16 @@ class RedGreenBlue:
     self.red = red
     self.green = green
     self.blue = blue
+  def str(self):
+      print("Red:", self.red)
+      print("Green:", self.green)
+      print("Blue:", self.blue)
+
+    
+
+    
+
+ 
 
 
 
-main()
