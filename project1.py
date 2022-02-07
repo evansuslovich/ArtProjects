@@ -1,5 +1,3 @@
-
-
 """ Image Processing 
  - OpenCV 
  - Mahotas
@@ -15,7 +13,7 @@
 
  Project 
 
- 6x6ft project with 1x1ft squares inside 
+ 5x5ft project with 1x1ft squares inside 
         
 
 In my project. I want to create a descending color pallete 
@@ -27,10 +25,8 @@ random coordinate points
 """
 
 
-def main(): 
-    #store in 36 variables the information of rgb values 
-    p1 = RedGreenBlue(200, 123, 254) # example of an rgb value of 200,123,254
-    p1.str()
+    
+
 
 
 #class RedGreenBlue that takes in three parameters 
@@ -39,12 +35,35 @@ class RedGreenBlue:
     self.red = red
     self.green = green
     self.blue = blue
-  def str(self):
-      print("Red:", self.red)
-      print("Green:", self.green)
-      print("Blue:", self.blue)
 
+  def str(self):
+    print("Red:", self.red, '\n' + "Green:", self.green, '\n' +  "Blue:", self.blue, '\n')
+
+
+
+def createArray(colors, amount):
+    interval = 255/amount
+    for x in range(amount + 1):
+        colors.append(RedGreenBlue((255-(x*interval)), 0, x*interval))
+
+def printArray(colors):
+    for i in range(len(colors)):
+        colors[i].str()
     
+
+
+colors = [] 
+createArray(colors, 10)
+printArray(colors)
+
+
+
+        
+
+
+   
+
+
 
     
 
